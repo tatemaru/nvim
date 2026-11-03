@@ -4,11 +4,17 @@ LazyVim-based Neovim config (shared across machines).
 
 ## Install
 
-```bash
-# backup existing config if any
-mv ~/.config/nvim{,.bak} 2>/dev/null || true
-mv ~/.local/share/nvim{,.bak} 2>/dev/null || true
+### With dotfiles (stow + submodule)
 
+```bash
+git clone --recurse-submodules git@github.com:tatemaru/dotfiles.git ~/workspace/dotfiles
+cd ~/workspace/dotfiles && make link
+```
+
+### Standalone
+
+```bash
+mv ~/.config/nvim{,.bak} 2>/dev/null || true
 git clone git@github.com:tatemaru/nvim.git ~/.config/nvim
 nvim
 ```
